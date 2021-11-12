@@ -5,12 +5,16 @@ object Form1: TForm1
   Height = 539
   Caption = 'Form1'
   Color = clBtnFace
+  UseDockManager = True
+  DockSite = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
   PixelsPerInch = 96
   TextHeight = 13
   object background1: TImage
@@ -52725,5 +52729,33 @@ object Form1: TForm1
     OnTimer = Ball_Timer
     Left = 536
     Top = 40
+  end
+  object Paddle1up: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Paddle1upTimer
+    Left = 40
+    Top = 88
+  end
+  object Paddle1down: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Paddle1downTimer
+    Left = 40
+    Top = 384
+  end
+  object Paddle2up: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Paddle2upTimer
+    Left = 1032
+    Top = 88
+  end
+  object Paddle2down: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = Paddle2downTimer
+    Left = 1032
+    Top = 400
   end
 end
