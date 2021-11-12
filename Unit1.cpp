@@ -10,13 +10,19 @@
 TForm1 *Form1;
         int x = 8;
         int y = -3;
+        int pointLeft=0;
+        int pointRight=0;
+        int bounces = 0;
+
+        AnsiString bouncesStr = bouncesStr = IntToStr(bounces);
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
+
 }
 //---------------------------------------------------------------------------
-
 void __fastcall TForm1::Ball_tTimer(TObject *Sender)
 {
         ball->Left += x;
@@ -29,22 +35,51 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
         if(ball->Top+ball->Height+5 >= background1->Height)
                 y = -y;
 
-        //--brak odbicia
-        if(ball->Left + 50 <= paddle1->Left ||
-        ball->Left+ball->Width - 50 >= paddle2->Left+paddle2->Width)
+        //--brak odbicia z lewej strony
+        if(ball->Left + 60 <= paddle1->Left)
         {
             Ball_t->Enabled = false;
             ball->Visible = false;
+            Label1->Visible = true;
+            Label1->Caption = "Punkt dla gracza prawego  >";
+            Label2->Visible = true;
+            Label2->Caption = pointLeft + ":" + ++pointRight;
+            Label3->Visible = true;
+            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
+            Button1->Visible = true;
+            Button2->Visible = true;
+            pointRight++;
         }
         else if(ball->Left < paddle1->Left+paddle1->Width && ball->Top >
         paddle1->Top-ball->Height/2 && ball->Top < paddle1->Top+paddle1->Height)
         {
+                //--odbicie z lewej strony
                 if(x<0) x = -x;
+                bounces++;
         }
-        else if(ball->Left+ball->Width > paddle2->Left && ball->Top >
-        paddle2->Top-ball->Height/2 && ball->Top < paddle2->Top+paddle2->Height)
+
+        //--brak odbicia z prawej strony
+        if(ball->Left+ball->Width - 60 >= paddle2->Left+paddle2->Width)
         {
+            Ball_t->Enabled = false;
+            ball->Visible = false;
+            Label1->Visible = true;
+            Label1->Caption = "<  Punkt dla gracza lewego";
+            Label2->Visible = true;
+            Label2->Caption = pointLeft + ":" + ++pointRight;
+            Label3->Visible = true;
+            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
+            Button1->Visible = true;
+            Button2->Visible = true;
+            pointLeft++;
+        }
+        else if(ball->Left+ball->Width > paddle2->Left &&
+        ball->Top+ball->Height > paddle2->Top &&
+        ball->Top < paddle2->Top+paddle2->Height-ball->Height/2)
+        {
+                //--odbicie z prawej strony
                 if(x>0) x = -x;
+                bounces++;
         }
 }
 //---------------------------------------------------------------------------
@@ -92,6 +127,42 @@ void __fastcall TForm1::FormKeyUp(TObject *Sender, WORD &Key,
         if(Key == VK_CONTROL) Paddle1down->Enabled = false;
         if(Key == VK_UP) Paddle2up->Enabled = false;
         if(Key == VK_DOWN) Paddle2down->Enabled = false;
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+        ball->Left = 536;
+        ball->Top = 232;
+
+        x = -8; y = 3;
+
+        ball->Visible = true;
+        Ball_t->Enabled = true;
+        Label1->Visible = false;
+        Label2->Visible = false;
+        Label3->Visible = false;
+        Button1->Visible = false;
+        Button2->Visible = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+       ball->Left = 536;
+       ball->Top = 232;
+
+       paddle1->Top = 128;  paddle2->Top = 128;
+
+       x = 7; y = 5;
+
+       ball->Visible = true;
+       Ball_t->Enabled = true;
+       Label1->Visible = false; Label2->Visible = false;
+       Label3->Visible = false;
+       Button1->Visible = false; Button2->Visible = false;
 }
 //---------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 362
-  Top = 329
+  Left = 429
+  Top = 237
   Width = 1116
   Height = 539
   Caption = 'Form1'
@@ -52724,8 +52724,95 @@ object Form1: TForm1
       FFFFFFFF0000}
     Transparent = True
   end
+  object Label2: TLabel
+    Left = 416
+    Top = 152
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '0:0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 416
+    Top = 216
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Ilo'#347#263' odbi'#263': '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+    Visible = False
+  end
+  object Label1: TLabel
+    Left = 336
+    Top = 64
+    Width = 450
+    Height = 70
+    Alignment = taCenter
+    AutoSize = False
+    BiDiMode = bdLeftToRight
+    Caption = 'Punkt dla gracza'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+    Layout = tlCenter
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 416
+    Top = 320
+    Width = 300
+    Height = 50
+    Cursor = crHandPoint
+    Caption = 'Nast'#281'pna runda >'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clTeal
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 416
+    Top = 384
+    Width = 300
+    Height = 50
+    Cursor = crHandPoint
+    Caption = 'Nowa gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    OnClick = Button2Click
+  end
   object Ball_t: TTimer
-    Interval = 20
+    Interval = 16
     OnTimer = Ball_tTimer
     Left = 536
     Top = 40
