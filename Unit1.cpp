@@ -14,8 +14,6 @@ TForm1 *Form1;
         int pointRight=0;
         int bounces = 0;
 
-        AnsiString bouncesStr = bouncesStr = IntToStr(bounces);
-
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -38,17 +36,17 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
         //--brak odbicia z lewej strony
         if(ball->Left + 60 <= paddle1->Left)
         {
+            pointRight++;
             Ball_t->Enabled = false;
             ball->Visible = false;
             Label1->Visible = true;
             Label1->Caption = "Punkt dla gracza prawego  >";
             Label2->Visible = true;
-            Label2->Caption = pointLeft + ":" + ++pointRight;
+            Label2->Caption = IntToStr(pointLeft) + ":" + IntToStr(pointRight);
             Label3->Visible = true;
-            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
+            Label3->Caption = "Iloœæ odbiæ: " + IntToStr(bounces);
             Button1->Visible = true;
             Button2->Visible = true;
-            pointRight++;
         }
         else if(ball->Left < paddle1->Left+paddle1->Width && ball->Top >
         paddle1->Top-ball->Height/2 && ball->Top < paddle1->Top+paddle1->Height)
@@ -61,17 +59,17 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
         //--brak odbicia z prawej strony
         if(ball->Left+ball->Width - 60 >= paddle2->Left+paddle2->Width)
         {
+            pointLeft++;
             Ball_t->Enabled = false;
             ball->Visible = false;
             Label1->Visible = true;
             Label1->Caption = "<  Punkt dla gracza lewego";
             Label2->Visible = true;
-            Label2->Caption = pointLeft + ":" + ++pointRight;
+            Label2->Caption = IntToStr(pointLeft) + ":" + IntToStr(pointRight);
             Label3->Visible = true;
-            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
+            Label3->Caption = "Iloœæ odbiæ: " + IntToStr(bounces);
             Button1->Visible = true;
             Button2->Visible = true;
-            pointLeft++;
         }
         else if(ball->Left+ball->Width > paddle2->Left &&
         ball->Top+ball->Height > paddle2->Top &&
@@ -151,19 +149,36 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
-       ball->Left = 536;
-       ball->Top = 232;
+        if(Application->MessageBox("Czy na pewno chcesz rozpocz¹æ now¹ grê?",
+        "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDYES)
+        {
+                ball->Left = 536;
+                ball->Top = 232;
 
-       paddle1->Top = 128;  paddle2->Top = 128;
+                paddle1->Top = 128;  paddle2->Top = 128;
 
-       x = 7; y = 5;
+                Label1->Visible = false; Label2->Visible = false;
+                Label3->Visible = false; Label4->Visible = true;
+                Button1->Visible = false; Button2->Visible = false;
+                Button3->Visible = true;
 
-       ball->Visible = true;
-       Ball_t->Enabled = true;
-       Label1->Visible = false; Label2->Visible = false;
-       Label3->Visible = false;
-       Button1->Visible = false; Button2->Visible = false;
+                pointLeft=0;
+                pointRight=0;
+                bounces = 0;
+       }
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+      Label4->Visible = false;
+      Button3->Visible = false;
+
+      x = -9; y = -4;
+
+      ball->Visible = true;
+      Ball_t->Enabled = true;
+}
+//---------------------------------------------------------------------------
 

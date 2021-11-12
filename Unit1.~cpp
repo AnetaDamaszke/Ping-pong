@@ -14,6 +14,8 @@ TForm1 *Form1;
         int pointRight=0;
         int bounces = 0;
 
+        AnsiString bouncesStr = bouncesStr = IntToStr(bounces);
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -43,7 +45,7 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
             Label2->Visible = true;
             Label2->Caption = pointLeft + ":" + ++pointRight;
             Label3->Visible = true;
-            Label3->Caption = "Iloœæ odbiæ: " + bounces;
+            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
             Button1->Visible = true;
             Button2->Visible = true;
             pointRight++;
@@ -51,6 +53,7 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
         else if(ball->Left < paddle1->Left+paddle1->Width && ball->Top >
         paddle1->Top-ball->Height/2 && ball->Top < paddle1->Top+paddle1->Height)
         {
+                //--odbicie z lewej strony
                 if(x<0) x = -x;
                 bounces++;
         }
@@ -65,7 +68,7 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
             Label2->Visible = true;
             Label2->Caption = pointLeft + ":" + ++pointRight;
             Label3->Visible = true;
-            Label3->Caption = "Iloœæ odbiæ: " + bounces;
+            Label3->Caption = "Iloœæ odbiæ: " + bouncesStr;
             Button1->Visible = true;
             Button2->Visible = true;
             pointLeft++;
@@ -74,6 +77,7 @@ void __fastcall TForm1::Ball_tTimer(TObject *Sender)
         ball->Top+ball->Height > paddle2->Top &&
         ball->Top < paddle2->Top+paddle2->Height-ball->Height/2)
         {
+                //--odbicie z prawej strony
                 if(x>0) x = -x;
                 bounces++;
         }
@@ -156,11 +160,10 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 
        ball->Visible = true;
        Ball_t->Enabled = true;
-       Label1->Visible = false;
-       Label2->Visible = false;
+       Label1->Visible = false; Label2->Visible = false;
        Label3->Visible = false;
-       Button1->Visible = false;
-       Button2->Visible = false;
+       Button1->Visible = false; Button2->Visible = false;
 }
 //---------------------------------------------------------------------------
+
 

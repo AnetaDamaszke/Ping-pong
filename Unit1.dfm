@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 429
-  Top = 237
+  Left = 398
+  Top = 206
   Width = 1116
   Height = 539
   Caption = 'Form1'
@@ -52777,13 +52777,30 @@ object Form1: TForm1
     Layout = tlCenter
     Visible = False
   end
+  object Label4: TLabel
+    Left = 336
+    Top = 96
+    Width = 450
+    Height = 70
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Zaczynamy  now'#261' gr'#281'!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+    Visible = False
+  end
   object Button1: TButton
     Left = 416
     Top = 320
     Width = 300
     Height = 50
     Cursor = crHandPoint
-    Caption = 'Nast'#281'pna runda >'
+    Caption = 'Kontynuuj gr'#281' >'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clTeal
     Font.Height = -23
@@ -52811,11 +52828,28 @@ object Form1: TForm1
     Visible = False
     OnClick = Button2Click
   end
+  object Button3: TButton
+    Left = 416
+    Top = 256
+    Width = 300
+    Height = 70
+    Cursor = crHandPoint
+    Caption = 'START'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clFuchsia
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+    OnClick = Button3Click
+  end
   object Ball_t: TTimer
     Interval = 16
     OnTimer = Ball_tTimer
-    Left = 536
-    Top = 40
+    Left = 552
+    Top = 16
   end
   object Paddle1up: TTimer
     Enabled = False
