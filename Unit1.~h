@@ -17,12 +17,12 @@ __published:	// IDE-managed Components
         TImage *ball;
         TImage *paddle1;
         TImage *paddle2;
-        TTimer *Ball_;
+        TTimer *Ball_t;
         TTimer *Paddle1up;
         TTimer *Paddle1down;
         TTimer *Paddle2up;
         TTimer *Paddle2down;
-        void __fastcall Ball_Timer(TObject *Sender);
+        void __fastcall Ball_tTimer(TObject *Sender);
         void __fastcall Paddle1downTimer(TObject *Sender);
         void __fastcall Paddle1upTimer(TObject *Sender);
         void __fastcall Paddle2downTimer(TObject *Sender);

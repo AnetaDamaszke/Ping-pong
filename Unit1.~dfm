@@ -52724,9 +52724,9 @@ object Form1: TForm1
       FFFFFFFF0000}
     Transparent = True
   end
-  object Ball_: TTimer
+  object Ball_t: TTimer
     Interval = 20
-    OnTimer = Ball_Timer
+    OnTimer = Ball_tTimer
     Left = 536
     Top = 40
   end
