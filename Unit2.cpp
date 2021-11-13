@@ -155,21 +155,7 @@ void __fastcall TForm2::Button2Click(TObject *Sender)
         if(Application->MessageBox("Czy na pewno chcesz rozpocz¹æ now¹ grê?",
         "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDYES)
         {
-                //ball->Left = 536;
-                //ball->Top = 232;
-
-                //paddle1->Top = 128;  paddle2->Top = 128;
-
-                //Label1->Visible = false; Label2->Visible = false;
-                //Label3->Visible = false; Label4->Visible = true;
-                //Button1->Visible = false; Button2->Visible = false;
-                //Button3->Visible = true;
-
-                //pointLeft=0;
-                //pointRight=0;
-                //bounces = 0;
-
-                Form1->Visible = true;
+                Form2->Visible = false;
        }        
 }
 //---------------------------------------------------------------------------
