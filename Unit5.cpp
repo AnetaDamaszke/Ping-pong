@@ -3,19 +3,15 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "Unit1.h"
-#include "Unit2.h"
-#include "Unit4.h"
+#include "Unit5.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm1 *Form1;
-
+TForm5 *Form5;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
+__fastcall TForm5::TForm5(TComponent* Owner)
         : TForm(Owner)
 {
-
 }
 //---------------------------------------------------------------------------
-
+ 

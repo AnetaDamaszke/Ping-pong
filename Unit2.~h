@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef Unit1H
-#define Unit1H
+#ifndef Unit2H
+#define Unit2H
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -10,19 +10,23 @@
 #include <ExtCtrls.hpp>
 #include <Graphics.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
-        TImage *background1;
-        TLabel *Label1;
-        TButton *Button1;
-        TButton *Button2;
-        TButton *Button3;
+        TImage *background2;
+        TImage *ball;
+        TImage *paddle1;
+        TImage *paddle2;
+        TTimer *Ball_t;
+        TTimer *paddle1up;
+        TTimer *paddle1down;
+        TTimer *paddle2uo;
+        TTimer *paddle2down;
 private:	// User declarations
 public:		// User declarations
-        __fastcall TForm1(TComponent* Owner);
+        __fastcall TForm2(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TForm2 *Form2;
 //---------------------------------------------------------------------------
 #endif
