@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 350
-  Top = 332
+  Left = 488
+  Top = 393
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsToolWindow
   Caption = 'Easy'
@@ -13,6 +13,7 @@ object Form2: TForm2
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96

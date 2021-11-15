@@ -1,9 +1,11 @@
 object Form1: TForm1
-  Left = 679
-  Top = 256
-  Width = 557
-  Height = 501
+  Left = 608
+  Top = 311
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsToolWindow
   Caption = 'Ping - pong'
+  ClientHeight = 462
+  ClientWidth = 541
   Color = clBtnFace
   UseDockManager = True
   DockSite = True
@@ -13,6 +15,8 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object background1: TImage
@@ -51613,6 +51617,7 @@ object Form1: TForm1
     Top = 152
     Width = 200
     Height = 50
+    Cursor = crHandPoint
     Caption = 'Easy'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -51628,6 +51633,7 @@ object Form1: TForm1
     Top = 224
     Width = 200
     Height = 50
+    Cursor = crHandPoint
     Caption = 'Mid'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -51643,6 +51649,7 @@ object Form1: TForm1
     Top = 296
     Width = 200
     Height = 50
+    Cursor = crHandPoint
     Caption = 'Hard'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

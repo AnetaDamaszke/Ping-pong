@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 477
-  Top = 330
+  Left = 488
+  Top = 411
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsToolWindow
   Caption = 'Mid'

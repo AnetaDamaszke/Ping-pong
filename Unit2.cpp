@@ -188,3 +188,17 @@ void __fastcall TForm2::Button3Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm2::FormClose(TObject *Sender, TCloseAction &Action)
+{
+        if(Application->MessageBox("Czy na pewno chcesz wy³¹czyæ grê?",
+        "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDNO)
+        {
+                Action=caNone;
+        }
+        else
+        {
+            Application->Terminate();
+        }
+}
+//---------------------------------------------------------------------------
+

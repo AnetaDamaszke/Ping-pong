@@ -19,7 +19,7 @@ __published:	// IDE-managed Components
         TTimer *paddle1down;
         TTimer *paddle2up;
         TTimer *paddle2down;
-        TImage *background1;
+        TImage *background;
         TImage *paddle1;
         TImage *paddle2;
         TLabel *Label1;

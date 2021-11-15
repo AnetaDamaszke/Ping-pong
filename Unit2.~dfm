@@ -1,10 +1,11 @@
 object Form2: TForm2
-  Left = 468
-  Top = 358
-  Width = 1117
-  Height = 543
+  Left = 350
+  Top = 332
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'Form2'
+  BorderStyle = bsToolWindow
+  Caption = 'Easy'
+  ClientHeight = 504
+  ClientWidth = 1101
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +17,7 @@ object Form2: TForm2
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
   TextHeight = 13
-  object background1: TImage
+  object background: TImage
     Left = 0
     Top = 0
     Width = 1100
@@ -52199,8 +52200,8 @@ object Form2: TForm2
     Transparent = True
   end
   object paddle2: TImage
-    Left = 1040
-    Top = 152
+    Left = 1048
+    Top = 136
     Width = 22
     Height = 241
     AutoSize = True
