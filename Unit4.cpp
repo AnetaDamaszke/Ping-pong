@@ -56,7 +56,17 @@ void __fastcall TForm4::Ball_tTimer(TObject *Sender)
                 //--odbicie z lewej strony
                 if(x<0) x = -x;
                 bounces++;
-                MediaPlayer1->Play();
+                sndPlaySound("sounds/bounce.wav", SND_ASYNC);
+
+                if(ball->Top > paddle1->Top+paddle1->Height/4 &&
+                ball->Top+ball->Height <
+                paddle1->Top+paddle1->Height-paddle1->Height/4)
+                {
+                   while(Ball_t->Interval > 1)
+                   {
+                       Ball_t->Interval--;
+                   }
+                }
         }
 
         //--brak odbicia z prawej strony
@@ -81,7 +91,17 @@ void __fastcall TForm4::Ball_tTimer(TObject *Sender)
                 //--odbicie z prawej strony
                 if(x>0) x = -x;
                 bounces++;
-                MediaPlayer1->Play();
+                sndPlaySound("sounds/bounce.wav", SND_ASYNC);
+
+                if(ball->Top > paddle2->Top+paddle2->Height/4 &&
+                ball->Top+ball->Height <
+                paddle2->Top+paddle2->Height-paddle2->Height/4)
+                {
+                   while(Ball_t->Interval > 1)
+                   {
+                       Ball_t->Interval--;
+                   }
+                }
         }
 }
 //---------------------------------------------------------------------------
@@ -136,6 +156,7 @@ void __fastcall TForm4::Button1Click(TObject *Sender)
 {
         ball->Left = 536;
         ball->Top = 232;
+        Ball_t->Interval = 20;
 
         x = -8; y = 3;
 
@@ -156,6 +177,7 @@ void __fastcall TForm4::Button2Click(TObject *Sender)
         {
                 ball->Visible = false;
                 Ball_t->Enabled = false;
+                Ball_t->Interval = 20;
                 bounces = 0;
                 pointLeft = 0;
                 pointRight = 0;
@@ -196,16 +218,9 @@ void __fastcall TForm4::FormClose(TObject *Sender, TCloseAction &Action)
         }
         else
         {
-            MediaPlayer1->Close();
             Application->Terminate();
         }
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm4::FormCreate(TObject *Sender)
-{
-        MediaPlayer1->FileName = "sounds/bounce.wav";
-        MediaPlayer1->Open();
-}
-//---------------------------------------------------------------------------
 

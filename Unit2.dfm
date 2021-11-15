@@ -1,12 +1,14 @@
 object Form2: TForm2
-  Left = 488
-  Top = 393
+  Left = 371
+  Top = 297
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsToolWindow
   Caption = 'Easy'
   ClientHeight = 504
   ClientWidth = 1101
   Color = clBtnFace
+  UseDockManager = True
+  DockSite = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -52725,7 +52727,7 @@ object Form2: TForm2
     Transparent = True
   end
   object Label1: TLabel
-    Left = 344
+    Left = 336
     Top = 56
     Width = 450
     Height = 70
@@ -52742,7 +52744,7 @@ object Form2: TForm2
     Visible = False
   end
   object Label2: TLabel
-    Left = 416
+    Left = 408
     Top = 144
     Width = 300
     Height = 50
@@ -52759,7 +52761,7 @@ object Form2: TForm2
     Visible = False
   end
   object Label3: TLabel
-    Left = 416
+    Left = 408
     Top = 208
     Width = 300
     Height = 50
@@ -52776,8 +52778,8 @@ object Form2: TForm2
     Visible = False
   end
   object Label4: TLabel
-    Left = 384
-    Top = 72
+    Left = 368
+    Top = 64
     Width = 369
     Height = 70
     Alignment = taCenter
@@ -52792,7 +52794,7 @@ object Form2: TForm2
     Transparent = True
   end
   object Button1: TButton
-    Left = 416
+    Left = 408
     Top = 304
     Width = 300
     Height = 50
@@ -52809,7 +52811,7 @@ object Form2: TForm2
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 416
+    Left = 408
     Top = 368
     Width = 300
     Height = 50
@@ -52826,7 +52828,7 @@ object Form2: TForm2
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 416
+    Left = 408
     Top = 208
     Width = 300
     Height = 70
@@ -52841,9 +52843,17 @@ object Form2: TForm2
     TabOrder = 2
     OnClick = Button3Click
   end
+  object MediaPlayer1: TMediaPlayer
+    Left = 440
+    Top = 448
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 3
+  end
   object Ball_t: TTimer
     Enabled = False
-    Interval = 16
+    Interval = 30
     OnTimer = Ball_tTimer
     Left = 544
     Top = 24

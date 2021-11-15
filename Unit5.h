@@ -9,6 +9,7 @@
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
 #include <Graphics.hpp>
+#include <MPlayer.hpp>
 //---------------------------------------------------------------------------
 class TForm5 : public TForm
 {
@@ -29,6 +30,7 @@ __published:	// IDE-managed Components
         TButton *Button1;
         TButton *Button2;
         TButton *Button3;
+        TMediaPlayer *MediaPlayer1;
         void __fastcall Ball_tTimer(TObject *Sender);
         void __fastcall paddle1upTimer(TObject *Sender);
         void __fastcall paddle1downTimer(TObject *Sender);

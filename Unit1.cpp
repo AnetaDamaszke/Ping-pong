@@ -51,12 +51,12 @@ void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
         Application->MessageBox(
-        "Czeka Ciê rozgrywka na 3 poziomach trudnoœci. /n"
-        "Aby sterowaæ lewym graczem u¿yj SHIFT (góra) oraz CTRL (dó³). /n"
-        "Aby sterowa prawym graczem u¿yj strza³ek GÓRA i DÓ£. /n"
-        "UWAGA: /n"
-        "Przy ka¿dym trafieniu w œrodek paletki pi³ka przyspiesza! /n"
-        "Udanej zabawy!",
+        "Czeka Ciê rozgrywka w Ping-Ponga na 3 poziomach trudnoœci. \n" "\n"
+        "Aby sterowaæ lewym graczem u¿yj SHIFT (góra) oraz CTRL (dó³). \n"
+        "Aby sterowa prawym graczem u¿yj strza³ek GÓRA i DÓ£. \n" "\n"
+        "UWAGA: \n"
+        "Przy ka¿dym odbiciu pi³ka przyspiesza! \n" "\n"
+        "Udanej zabawy :)",
         "Witaj w grze!", MB_OK);
 }
 //---------------------------------------------------------------------------

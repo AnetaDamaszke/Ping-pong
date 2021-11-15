@@ -1,12 +1,14 @@
 object Form5: TForm5
-  Left = 492
-  Top = 392
+  Left = 390
+  Top = 221
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsToolWindow
   Caption = 'Form5'
   ClientHeight = 502
   ClientWidth = 1100
   Color = clBtnFace
+  UseDockManager = True
+  DockSite = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -52704,9 +52706,17 @@ object Form5: TForm5
     TabOrder = 2
     OnClick = Button3Click
   end
+  object MediaPlayer1: TMediaPlayer
+    Left = 440
+    Top = 440
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 3
+  end
   object Ball_t: TTimer
     Enabled = False
-    Interval = 17
+    Interval = 16
     OnTimer = Ball_tTimer
     Left = 536
     Top = 16

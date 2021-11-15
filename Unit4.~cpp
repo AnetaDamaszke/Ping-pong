@@ -56,6 +56,7 @@ void __fastcall TForm4::Ball_tTimer(TObject *Sender)
                 //--odbicie z lewej strony
                 if(x<0) x = -x;
                 bounces++;
+                MediaPlayer1->Play();
         }
 
         //--brak odbicia z prawej strony
@@ -80,9 +81,8 @@ void __fastcall TForm4::Ball_tTimer(TObject *Sender)
                 //--odbicie z prawej strony
                 if(x>0) x = -x;
                 bounces++;
+                MediaPlayer1->Play();
         }
-
-        //--przyspieszenie pi³ki
 }
 //---------------------------------------------------------------------------
 
@@ -196,8 +196,16 @@ void __fastcall TForm4::FormClose(TObject *Sender, TCloseAction &Action)
         }
         else
         {
+            MediaPlayer1->Close();
             Application->Terminate();
         }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::FormCreate(TObject *Sender)
+{
+        MediaPlayer1->FileName = "sounds/bounce.wav";
+        MediaPlayer1->Open();
 }
 //---------------------------------------------------------------------------
 

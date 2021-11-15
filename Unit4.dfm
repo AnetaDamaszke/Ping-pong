@@ -7,6 +7,8 @@ object Form4: TForm4
   ClientHeight = 502
   ClientWidth = 1103
   Color = clBtnFace
+  UseDockManager = True
+  DockSite = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,7 +16,6 @@ object Form4: TForm4
   Font.Style = []
   OldCreateOrder = False
   OnClose = FormClose
-  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -52721,7 +52722,6 @@ object Form4: TForm4
     ParentFont = False
     Transparent = True
     Layout = tlCenter
-    Visible = False
   end
   object Button1: TButton
     Left = 400
@@ -52769,19 +52769,19 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    Visible = False
     OnClick = Button3Click
   end
   object MediaPlayer1: TMediaPlayer
-    Left = 488
-    Top = 448
+    Left = 408
+    Top = 440
     Width = 253
     Height = 30
     Visible = False
     TabOrder = 3
   end
   object Ball_t: TTimer
-    Interval = 16
+    Enabled = False
+    Interval = 20
     OnTimer = Ball_tTimer
     Left = 536
     Top = 40
