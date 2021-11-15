@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 488
-  Top = 411
+  Left = 407
+  Top = 271
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsToolWindow
   Caption = 'Mid'
@@ -14,6 +14,7 @@ object Form4: TForm4
   Font.Style = []
   OldCreateOrder = False
   OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -52771,8 +52772,16 @@ object Form4: TForm4
     Visible = False
     OnClick = Button3Click
   end
+  object MediaPlayer1: TMediaPlayer
+    Left = 488
+    Top = 448
+    Width = 253
+    Height = 30
+    Visible = False
+    TabOrder = 3
+  end
   object Ball_t: TTimer
-    Interval = 17
+    Interval = 16
     OnTimer = Ball_tTimer
     Left = 536
     Top = 40
