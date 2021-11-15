@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 362
-  Top = 315
+  Left = 477
+  Top = 330
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsToolWindow
   Caption = 'Mid'
@@ -13,6 +13,7 @@ object Form4: TForm4
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -52736,6 +52737,7 @@ object Form4: TForm4
     ParentFont = False
     TabOrder = 0
     Visible = False
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 400
@@ -52751,6 +52753,7 @@ object Form4: TForm4
     ParentFont = False
     TabOrder = 1
     Visible = False
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 400
@@ -52766,6 +52769,7 @@ object Form4: TForm4
     ParentFont = False
     TabOrder = 2
     Visible = False
+    OnClick = Button3Click
   end
   object Ball_t: TTimer
     Interval = 17

@@ -175,3 +175,16 @@ void __fastcall TForm5::Button3Click(TObject *Sender)
       Ball_t->Enabled = true;
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm5::FormClose(TObject *Sender, TCloseAction &Action)
+{
+      if(Application->MessageBox("Czy na pewno chcesz wy³¹czyæ grê?",
+        "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDNO)
+        {
+                Action=caNone;
+        }
+        else
+        {
+            Application->Terminate();
+        }
+}
+//---------------------------------------------------------------------------

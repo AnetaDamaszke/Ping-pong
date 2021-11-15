@@ -23,8 +23,6 @@ __fastcall TForm4::TForm4(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-
-
 void __fastcall TForm4::Ball_tTimer(TObject *Sender)
 {
         ball->Left += x;
@@ -90,27 +88,27 @@ void __fastcall TForm4::Ball_tTimer(TObject *Sender)
 
 void __fastcall TForm4::paddle1upTimer(TObject *Sender)
 {
-        if(paddle1->Top > 10) paddle1->Top -= 10;        
+        if(paddle1->Top > 10) paddle1->Top -= 10;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm4::paddle1downTimer(TObject *Sender)
 {
         if(paddle1->Top+paddle1->Height < background->Height-11)
-        paddle1->Top += 10;        
+        paddle1->Top += 10;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm4::paddle2upTimer(TObject *Sender)
 {
-        if(paddle2->Top > 10) paddle2->Top -= 10;        
+        if(paddle2->Top > 10) paddle2->Top -= 10;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm4::paddle2downTimer(TObject *Sender)
 {
         if(paddle2->Top+paddle2->Height < background->Height-11)
-        paddle2->Top += 10;        
+        paddle2->Top += 10;
 }
 //---------------------------------------------------------------------------
 
@@ -120,7 +118,7 @@ void __fastcall TForm4::FormKeyDown(TObject *Sender, WORD &Key,
         if(Key == VK_SHIFT) paddle1up->Enabled = true;
         if(Key == VK_CONTROL) paddle1down->Enabled = true;
         if(Key == VK_UP) paddle2up->Enabled = true;
-        if(Key == VK_DOWN) paddle2down->Enabled = true;        
+        if(Key == VK_DOWN) paddle2down->Enabled = true;
 }
 //---------------------------------------------------------------------------
 
@@ -131,6 +129,71 @@ void __fastcall TForm4::FormKeyUp(TObject *Sender, WORD &Key,
         if(Key == VK_CONTROL) paddle1down->Enabled = false;
         if(Key == VK_UP) paddle2up->Enabled = false;
         if(Key == VK_DOWN) paddle2down->Enabled = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::Button1Click(TObject *Sender)
+{
+        ball->Left = 536;
+        ball->Top = 232;
+
+        x = -8; y = 3;
+
+        ball->Visible = true;
+        Ball_t->Enabled = true;
+        Label1->Visible = false;
+        Label2->Visible = false;
+        Label3->Visible = false;
+        Button1->Visible = false;
+        Button2->Visible = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::Button2Click(TObject *Sender)
+{
+        if(Application->MessageBox("Czy na pewno chcesz rozpocz¹æ now¹ grê?",
+        "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDYES)
+        {
+                ball->Visible = false;
+                Ball_t->Enabled = false;
+                bounces = 0;
+                pointLeft = 0;
+                pointRight = 0;
+                paddle1->Top = 136;
+                paddle2->Top = 136;
+                ball->Left = 536;
+                ball->Top = 236;
+                Label1->Visible = false;
+                Label2->Visible = false;
+                Label3->Visible = false;
+                Label4->Visible = true;
+                Button1->Visible = false;
+                Button2->Visible = false;
+                Button3->Visible = true;
+                Form4->Visible = false;
+       }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::Button3Click(TObject *Sender)
+{
+      Label4->Visible = false;
+      Button3->Visible = false;
+
+      x = -9; y = -4;
+
+      ball->Visible = true;
+      Ball_t->Enabled = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::FormClose(TObject *Sender, TCloseAction &Action)
+{
+         if(Application->MessageBox("Czy na pewno chcesz wy³¹czyæ grê?",
+        "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDYES)
+        {
+                Application->Terminate();
+        }        
 }
 //---------------------------------------------------------------------------
 

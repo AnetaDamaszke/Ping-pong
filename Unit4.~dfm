@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 380
-  Top = 278
+  Left = 362
+  Top = 315
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsToolWindow
   Caption = 'Mid'
@@ -52653,61 +52653,117 @@ object Form4: TForm4
     Transparent = True
   end
   object Label1: TLabel
-    Left = 544
-    Top = 112
-    Width = 32
-    Height = 13
-    Caption = 'Label1'
+    Left = 328
+    Top = 56
+    Width = 450
+    Height = 70
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'punkt dla gracza'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
     Visible = False
   end
   object Label2: TLabel
-    Left = 560
+    Left = 400
     Top = 144
-    Width = 32
-    Height = 13
-    Caption = 'Label2'
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '0:0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
     Visible = False
   end
   object Label3: TLabel
-    Left = 568
-    Top = 176
-    Width = 32
-    Height = 13
-    Caption = 'Label3'
+    Left = 400
+    Top = 208
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'ilosc odbic'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
     Visible = False
   end
   object Label4: TLabel
-    Left = 400
-    Top = 128
-    Width = 32
-    Height = 13
-    Caption = 'Label4'
+    Left = 368
+    Top = 56
+    Width = 400
+    Height = 70
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Zaczynamy rozgrywk'#281'!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+    Layout = tlCenter
     Visible = False
   end
   object Button1: TButton
-    Left = 544
-    Top = 304
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
+    Left = 400
+    Top = 296
+    Width = 300
+    Height = 50
+    Caption = 'Kotynuuj gr'#281' >'
+    Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     Visible = False
   end
   object Button2: TButton
-    Left = 576
+    Left = 400
     Top = 360
-    Width = 75
-    Height = 25
-    Caption = 'Button2'
+    Width = 300
+    Height = 50
+    Caption = 'Nowa gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Visible = False
   end
   object Button3: TButton
-    Left = 432
-    Top = 328
-    Width = 75
-    Height = 25
-    Caption = 'Button3'
+    Left = 400
+    Top = 208
+    Width = 300
+    Height = 70
+    Caption = 'START'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     Visible = False
   end

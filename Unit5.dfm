@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 406
-  Top = 317
+  Left = 492
+  Top = 392
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsToolWindow
   Caption = 'Form5'
@@ -13,6 +13,7 @@ object Form5: TForm5
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -52603,19 +52604,37 @@ object Form5: TForm5
     Visible = False
   end
   object Label2: TLabel
-    Left = 536
-    Top = 152
-    Width = 32
-    Height = 13
-    Caption = 'Label2'
+    Left = 408
+    Top = 144
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '0:0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
     Visible = False
   end
   object Label3: TLabel
-    Left = 544
-    Top = 192
-    Width = 32
-    Height = 13
-    Caption = 'Label3'
+    Left = 408
+    Top = 208
+    Width = 300
+    Height = 50
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'ilosc odbic'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
     Visible = False
   end
   object Label4: TLabel
@@ -52627,7 +52646,7 @@ object Form5: TForm5
     AutoSize = False
     Caption = 'Zaczynamy rogrywk'#281'!'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clWhite
     Font.Height = -31
     Font.Name = 'MS Sans Serif'
     Font.Style = []
@@ -52636,31 +52655,52 @@ object Form5: TForm5
     Layout = tlCenter
   end
   object Button1: TButton
-    Left = 552
-    Top = 312
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
+    Left = 408
+    Top = 304
+    Width = 300
+    Height = 50
+    Caption = 'Kontynuuj gr'#281' >'
+    Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = False
     TabOrder = 0
     Visible = False
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 568
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Button2'
+    Left = 408
+    Top = 368
+    Width = 300
+    Height = 50
+    Caption = 'Nowa gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Visible = False
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 560
-    Top = 392
-    Width = 75
-    Height = 25
-    Caption = 'Button3'
+    Left = 408
+    Top = 216
+    Width = 300
+    Height = 70
+    Caption = 'START'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     OnClick = Button3Click
   end
@@ -52669,7 +52709,7 @@ object Form5: TForm5
     Interval = 17
     OnTimer = Ball_tTimer
     Left = 536
-    Top = 32
+    Top = 16
   end
   object paddle1up: TTimer
     Enabled = False
