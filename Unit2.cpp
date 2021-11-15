@@ -29,10 +29,10 @@ void __fastcall TForm2::Ball_tTimer(TObject *Sender)
         ball->Top += y;
 
         //--odbicie od górnej sciany
-        if(ball->Top-5 <= background1->Top) y = -y;
+        if(ball->Top-5 <= background->Top) y = -y;
 
         //--odbicie od dolnej sciany
-        if(ball->Top+ball->Height+5 >= background1->Height)
+        if(ball->Top+ball->Height+5 >= background->Height)
                 y = -y;
 
         //--brak odbicia z lewej strony
@@ -88,8 +88,8 @@ void __fastcall TForm2::Ball_tTimer(TObject *Sender)
 
 void __fastcall TForm2::paddle1downTimer(TObject *Sender)
 {
-        if(paddle1->Top+paddle1->Height < background1->Height-11)
-        paddle1->Top += 10;        
+        if(paddle1->Top+paddle1->Height < background->Height-11)
+        paddle1->Top += 10;
 }
 //---------------------------------------------------------------------------
 
@@ -102,14 +102,14 @@ void __fastcall TForm2::paddle1upTimer(TObject *Sender)
 
 void __fastcall TForm2::paddle2downTimer(TObject *Sender)
 {
-        if(paddle2->Top+paddle2->Height < background1->Height-11)
-        paddle2->Top += 10;        
+        if(paddle2->Top+paddle2->Height < background->Height-11)
+        paddle2->Top += 10;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm2::paddle2upTimer(TObject *Sender)
 {
-        if(paddle2->Top > 10) paddle2->Top -= 10;        
+        if(paddle2->Top > 10) paddle2->Top -= 10;
 }
 //---------------------------------------------------------------------------
 
@@ -146,7 +146,7 @@ void __fastcall TForm2::Button1Click(TObject *Sender)
         Label2->Visible = false;
         Label3->Visible = false;
         Button1->Visible = false;
-        Button2->Visible = false;        
+        Button2->Visible = false;
 }
 //---------------------------------------------------------------------------
 
@@ -155,14 +155,30 @@ void __fastcall TForm2::Button2Click(TObject *Sender)
         if(Application->MessageBox("Czy na pewno chcesz rozpocz¹æ now¹ grê?",
         "PotwierdŸ", MB_YESNO | MB_ICONQUESTION) == IDYES)
         {
+                ball->Visible = false;
+                Ball_t->Enabled = false;
+                bounces = 0;
+                pointLeft = 0;
+                pointRight = 0;
+                paddle1->Top = 110;
+                paddle2->Top = 110;
+                ball->Left = 536;
+                ball->Top = 236;
+                Label1->Visible = false;
+                Label2->Visible = false;
+                Label3->Visible = false;
+                Label4->Visible = true;
+                Button1->Visible = false;
+                Button2->Visible = false;
+                Button3->Visible = true;
                 Form2->Visible = false;
-       }        
+       }
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm2::Button3Click(TObject *Sender)
 {
-        Label4->Visible = false;
+      Label4->Visible = false;
       Button3->Visible = false;
 
       x = -9; y = -4;

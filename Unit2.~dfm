@@ -1,8 +1,9 @@
 object Form2: TForm2
-  Left = 353
-  Top = 218
+  Left = 468
+  Top = 358
   Width = 1117
   Height = 543
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Form2'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -52773,7 +52774,7 @@ object Form2: TForm2
     Visible = False
   end
   object Label4: TLabel
-    Left = 392
+    Left = 384
     Top = 72
     Width = 369
     Height = 70
