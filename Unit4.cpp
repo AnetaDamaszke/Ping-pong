@@ -24,22 +24,7 @@ __fastcall TForm4::TForm4(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm4::Button1Click(TObject *Sender)
-{
-        Form1->Visible = true;
-}
-//---------------------------------------------------------------------------
 
-void __fastcall TForm4::Button2Click(TObject *Sender)
-{
-        Form2->Visible = true;        
-}
-//---------------------------------------------------------------------------
-void __fastcall TForm4::Button3Click(TObject *Sender)
-{
-        Form5->Visible = true;
-}
-//---------------------------------------------------------------------------
 void __fastcall TForm4::Ball_tTimer(TObject *Sender)
 {
         ball->Left += x;

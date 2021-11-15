@@ -29,9 +29,6 @@ __published:	// IDE-managed Components
         TButton *Button1;
         TButton *Button2;
         TButton *Button3;
-        void __fastcall Button1Click(TObject *Sender);
-        void __fastcall Button2Click(TObject *Sender);
-        void __fastcall Button3Click(TObject *Sender);
         void __fastcall Ball_tTimer(TObject *Sender);
         void __fastcall paddle1upTimer(TObject *Sender);
         void __fastcall paddle1downTimer(TObject *Sender);
